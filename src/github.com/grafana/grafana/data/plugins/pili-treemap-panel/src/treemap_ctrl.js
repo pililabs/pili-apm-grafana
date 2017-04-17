@@ -113,6 +113,8 @@ export class TreeMapCtrl extends MetricsPanelCtrl {
             {
                 name:'矩形图',
                 type:'treemap',
+                roam: false,
+                nodeClick: false,
                 itemStyle: {
                     normal: {
                         label: {
