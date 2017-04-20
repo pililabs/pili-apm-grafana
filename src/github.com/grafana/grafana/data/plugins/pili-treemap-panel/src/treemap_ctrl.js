@@ -53,15 +53,15 @@ export class TreeMapCtrl extends MetricsPanelCtrl {
                     trigger: 'item',
                     formatter: "{b}: {c}"
                 },
-                toolbox: {
-                    show : false,
-                    feature : {
-                        mark : {show: true},
-                        dataView : {show: true, readOnly: false},
-                        restore : {show: true},
-                        saveAsImage : {show: true}
-                    }
-                },
+                // toolbox: {
+                //     show : false,
+                //     feature : {
+                //         mark : {show: true},
+                //         dataView : {show: true, readOnly: false},
+                //         restore : {show: true},
+                //         saveAsImage : {show: true}
+                //     }
+                // },
                 calculable : false,
                 series : this._series,
 
@@ -111,10 +111,13 @@ export class TreeMapCtrl extends MetricsPanelCtrl {
         var textColor = this._colorRGB2Hex(this.panel.textFontSetting.color);
         this._series = [
             {
-                name:'矩形图',
+                // name:'矩形图',
                 type:'treemap',
                 roam: false,
                 nodeClick: false,
+                breadcrumb: {
+                    show: false,
+                },
                 itemStyle: {
                     normal: {
                         label: {
