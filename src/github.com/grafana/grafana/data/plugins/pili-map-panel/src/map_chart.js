@@ -120,7 +120,8 @@ class MapChart {
 
             const province = targetObj.province;
 
-            this._updateSerieData(province, serieName, value);
+
+            this._updateSerieData(province, serieName, Math.round(value));
         });
         this._legend.show = this._legend.data.length > 1;
 
